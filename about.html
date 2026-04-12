@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="montik.png" alt="Logo" class="logo-img">
+                <span>Portfolio</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- About Section -->
+    <section class="about">
+        <div class="about-container">
+            <div class="about-left">
+                <h2>Why Hire Me?</h2>
+                <p>I'm a passionate and experienced MERN stack developer who simplifies complex concepts. I deliver quality mentorship, clear teaching, and reliable websites tailored to client needs with full dedication and care.</p>
+                
+                <div class="tabs-button">
+                    <button class="tab-btn active" onclick="showTab('experience')">Experience</button>
+                    <button class="tab-btn" onclick="showTab('education')">Education</button>
+                    <button class="tab-btn" onclick="showTab('skills')">Skills</button>
+                    <button class="tab-btn" onclick="showTab('about-me')">About Me</button>
+                </div>
+            </div>
+
+            <div class="about-right">
+                <!-- Experience Tab -->
+                <div id="experience" class="tab-content active">
+                    <h3>My <span class="highlight">Experience</span></h3>
+                    <p>Here are some of my professional experiences that showcase my journey, skills, and dedication in web development and collaboration.</p>
+                    
+                    <div class="experience-item">
+                        <h4>Frontend Developer</h4>
+                        <p class="company"><strong>Mindstay Technology</strong></p>
+                        <p class="duration">2022 - 2023</p>
+                        <p class="description">Built responsive and optimized UIs using React.js and Tailwind CSS. Collaborated with backend teams to integrate APIs and improve user experience.</p>
+                    </div>
+
+                    <div class="experience-item">
+                        <h4>MERN Stack Intern</h4>
+                        <p class="company"><strong>Tech Solutions</strong></p>
+                        <p class="duration">2021 - 2022</p>
+                        <p class="description">Worked on full-stack web applications using MongoDB, Express, React, and Node.js. Learned best practices and real-world development workflows.</p>
+                    </div>
+                </div>
+
+                <!-- Education Tab -->
+                <div id="education" class="tab-content">
+                    <h3>My <span class="highlight">Education</span></h3>
+                    <p>Here are my educational qualifications that have built a strong foundation in technology, problem-solving, and continuous learning in web development.</p>
+                    
+                    <div class="education-item">
+                        <h4>Bachelor of Computer Applications (BCA)</h4>
+                        <p class="school"><strong>CS University, Dehradun</strong></p>
+                        <p class="duration">2020 - 2023</p>
+                        <p class="description">Studied core subjects like Data Structures, Web Development, and Operating Systems. Built multiple academic projects using JavaScript and the MERN stack.</p>
+                    </div>
+
+                    <div class="education-item">
+                        <h4>Secondary School Certificate (SSC)</h4>
+                        <p class="school"><strong>ABC High School, Banglore</strong></p>
+                        <p class="duration">2016 - 2018</p>
+                        <p class="description">Completed basic schooling with distinction. Actively participated in computer clubs and tech-related events.</p>
+                    </div>
+                </div>
+
+                <!-- Skills Tab -->
+                <div id="skills" class="tab-content">
+                    <h3>My <span class="highlight">Skills</span></h3>
+                    <p>Here are the key skills I've mastered through hands-on experience, enabling me to build high-quality, scalable, and responsive web applications.</p>
+                    
+                    <div class="skills-grid">
+                        <div class="skill-card">
+                            <i class="bx bxl-html5"></i>
+                            <p>HTML5</p>
+                        </div>
+                        <div class="skill-card">
+                            <i class="bx bxl-css3"></i>
+                            <p>CSS3</p>
+                        </div>
+                        <div class="skill-card">
+                            <i class="bx bxl-javascript"></i>
+                            <p>JavaScript</p>
+                        </div>
+                        <div class="skill-card">
+                            <i class="bx bxl-react"></i>
+                            <p>React</p>
+                        </div>
+                        <div class="skill-card">
+                            <i class="bx bxl-nodejs"></i>
+                            <p>Node.js</p>
+                        </div>
+                        <div class="skill-card">
+                            <i class="bx bxl-mongodb"></i>
+                            <p>MongoDB</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- About Me Tab -->
+                <div id="about-me" class="tab-content">
+                    <h3>About <span class="highlight">Me</span></h3>
+                    <p>I'm passionate about web development and helping others learn. I believe in writing clean, maintainable code and creating user-friendly interfaces. When I'm not coding, I love sharing knowledge and mentoring junior developers.</p>
+                    <p>My journey in tech started with a curiosity about how websites work, which led me to master HTML, CSS, and JavaScript. Today, I specialize in full-stack development and am committed to building innovative solutions that make a real impact.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 Monti Kumawat. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

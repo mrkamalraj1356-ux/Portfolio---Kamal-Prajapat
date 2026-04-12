@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Kamal Prajapat</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="kamal.jpeg" alt="Logo" class="logo-img">
+                <span>Portfolio</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Kamal Prajapat</h1>
+            <div class="typing-container">
+                <p class="typing-text">I'm a <span id="typing-text"></span></p>
+            </div>
+            <p class="hero-description">I am a BCA student passionate about technology and coding. 
+I enjoy learning web development and building modern websites. 
+I also have an interest in cybersecurity and ethical hacking. 
+Along with coding, I use Photoshop to create creative designs.</p>
+            <div class="hero-buttons">
+                <a href="kamal_prajapat_cv.pdf" download class="btn btn-primary">Download CV</a>
+                <div class="hero-social-icons">
+                    <a href="https://www.linkedin.com/feed/" class="hero-social-icon" title="LinkedIn" target="_blank">
+                        <i class="bx bxl-linkedin"></i>
+                    </a>
+                    <a href="https://www.youtube.com/@KamalPrajapat-ok9r" class="hero-social-icon" title="YouTube" target="_blank">
+                        <i class="bx bxl-youtube"></i>
+                    </a>
+                    <a href="https://github.com/mrkamalraj1356-ux" class="hero-social-icon" title="GitHub" target="_blank">
+                        <i class="bx bxl-github"></i>
+                    </a>
+                    <a href="https://www.instagram.com/kamalraj65kp?igsh=Y3F1ZnJpb2Mwd2h3" class="hero-social-icon" title="Instagram" target="_blank">
+                        <i class="bx bxl-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="kamal.jpeg" alt="Profile" class="profile-img">
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <h2>My <span class="highlight">Services</span></h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="bx bxs-code"></i>
+                </div>
+                <h3>Website Development</h3>
+                <p>I build responsive and modern websites using the latest technologies like HTML, CSS, JavaScript, React, and Node.js</p>
+                <a href="services.html" class="service-link">Learn More →</a>
+            </div>
+
+            <div class="service-card highlight-card">
+                <div class="service-icon">
+                    <i class="bx bxs-edit"></i>
+                </div>
+                <h3>UX/UI Design</h3>
+                <p>Custom mobile apps for Android and iOS using React Native and Expo designed to provide excellent UI/UX experience</p>
+                <a href="services.html" class="service-link">Learn More →</a>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="bx bxs-trending-up"></i>
+                </div>
+                <h3>SEO Optimization</h3>
+                <p>I improve website visibility on search engines with optimized structure, keywords, and performance best practices</p>
+                <a href="services.html" class="service-link">Learn More →</a>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="bx bxs-palette"></i>
+                </div>
+                <h3>Graphic Design</h3>
+                <p>Offering expert advice and solutions for tech projects, helping individuals and startups with project planning</p>
+                <a href="services.html" class="service-link">Learn More →</a>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="bx bxs-video"></i>
+                </div>
+                <h3>Mentorship & Training</h3>
+                <p>Personal mentorship for beginners to advanced learners in web development, including live coding sessions</p>
+                <a href="services.html" class="service-link">Learn More →</a>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="bx bxs-camera"></i>
+                </div>
+                <h3>Photography</h3>
+                <p>End-to-end delivery of freelance projects – from planning to deployment – with quality assurance and support</p>
+                <a href="services.html" class="service-link">Learn More →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="about-container">
+            <div class="about-left">
+                <h2>Why Hire Me?</h2>
+                <p>I am a dedicated BCA student passionate about web development and technology. 
+                I enjoy building modern websites, learning cybersecurity concepts, 
+                and creating creative designs using Photoshop.
+                I am always eager to improve my skills and deliver quality work.</p>
+                
+                <div class="tabs-button">
+                    <button class="tab-btn active" onclick="showTab('experience')">Experience</button>
+                    <button class="tab-btn" onclick="showTab('education')">Education</button>
+                    <button class="tab-btn" onclick="showTab('skills')">Skills</button>
+                    <button class="tab-btn" onclick="showTab('about-me')">About Me</button>
+                </div>
+            </div>
+
+            <div class="about-right">
+                <!-- Experience Tab -->
+                <div id="experience" class="tab-content active">
+                    <h3>My <span class="highlight">Experience</span></h3>
+                    <p>Here are some of my professional experiences that showcase my journey, skills, and dedication in web development and collaboration.</p>
+                    
+                    <div class="experience-item">
+                        <h4>Cybersecurity & Ethical Hacking Learner</h4>
+                        <p class="company"><strong>Self Learning</strong></p>
+                        <p class="duration">2025 - Present</p>
+                        <p class="description">Exploring cybersecurity concepts and ethical hacking basics. 
+                        Learning how to identify security issues and understand system protection methods.</p>
+                    </div>
+
+                    <div class="experience-item">
+                        <h4>Photoshop Designer</h4>
+                        <p class="company"><strong>Personal Projects</strong></p>
+                        <p class="duration">2025 - Present</p>
+                        <p class="description">
+                        Creating creative graphics and visual designs using Adobe Photoshop. 
+                        Working on photo editing and digital design practice.</p>
+                    </div>
+                </div>
+
+                <!-- Education Tab -->
+                <div id="education" class="tab-content">
+                    <h3>My <span class="highlight">Education</span></h3>
+                    <p>Here are my educational qualifications that have built a strong foundation in technology, problem-solving, and continuous learning in web development.</p>
+                    
+                    <div class="education-item">
+                        <h4>Bachelor of Computer Applications (BCA)</h4>
+                        <p class="school"><strong>Biyan College, Champapura</strong></p>
+                        <p class="duration">2025 - Present</p>
+                        <p class="description">Currently pursuing BCA with a focus on computer programming, web development, and technology.</p>
+                    </div>
+
+                    <div class="education-item">
+                        <h4>12th (Science - Biology)</h4>
+                        <p class="school"><strong>Bharti School, Pachar, Jaipur</strong></p>
+                        <p class="duration">2023</p>
+                        <p class="description">Completed higher secondary education with 71.40%.</p>
+                    </div>
+                </div>
+
+                <!-- Skills Tab -->
+                <div id="skills" class="tab-content">
+                    <h3>My <span class="highlight">Skills</span></h3>
+                    <p>Here are the key skills I've mastered through hands-on experience, enabling me to build high-quality, scalable, and responsive web applications.</p>
+                    
+                    <div class="skills-grid">
+                        <div class="skill-card">
+                            <i class="bx bxl-html5"></i>
+                            <p>HTML5</p>
+                        </div>
+                        <div class="skill-card">
+                            <i class="bx bxl-css3"></i>
+                            <p>CSS3</p>
+                        </div>
+                        <div class="skill-card">
+                            <i class="bx bxl-javascript"></i>
+                            <p>JavaScript</p>
+                        </div>
+                        <div class="skill-card">
+                            <i class="bx bxl-react"></i>
+                            <p>React</p>
+                        </div>
+                        <div class="skill-card">
+                            <i class="bx bxl-nodejs"></i>
+                            <p>Node.js</p>
+                        </div>
+                        <div class="skill-card">
+                            <i class="bx bxl-mongodb"></i>
+                            <p>MongoDB</p>
+                        </div>
+                        <div class="skill-card">
+                            <i class="bx bxl-git"></i>
+                            <p>Git</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- About Me Tab -->
+                <div id="about-me" class="tab-content">
+                    <h3>About <span class="highlight">Me</span></h3>
+                    <p>I am a passionate BCA student with a strong interest in technology, programming, and cybersecurity. 
+                    I enjoy learning web development and creating modern, responsive websites using HTML, CSS, and JavaScript. 
+                    Along with coding, I also work with Photoshop to design creative visuals and graphics.</p>
+                    <p>My goal is to continuously improve my technical skills, explore ethical hacking concepts, 
+                    and build innovative digital projects that solve real-world problems.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <h1>Let's <span class="highlight">Work Together</span></h1>
+        <p class="contact-intro">Let's Work Together
+        If you have a project, idea, or collaboration in mind, feel free to contact me. 
+        I am always open to learning new things and working on creative and innovative projects. 
+        Let's build something great together.</p>
+
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Contact Information</h3>
+                
+                <div class="info-item">
+                    <div class="info-icon">
+                        <i class="bx bxs-phone"></i>
+                    </div>
+                    <div>
+                        <h4>Phone</h4>
+                        <a href="tel:+919256808975" class="contact-link">+91 9256808975</a>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <div class="info-icon">
+                        <i class="bx bxs-envelope"></i>
+                    </div>
+                    <div>
+                        <h4>Email</h4>
+                        <a href="mailto:mrkamalraj556@gmail.com" class="contact-link">mrkamalraj556@gmail.com</a>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <div class="info-icon">
+                        <i class="bx bxs-map"></i>
+                    </div>
+                    <div>
+                        <h4>Location</h4>
+                        <p>India</p>
+                    </div>
+                </div>
+
+                <div class="social-icons-contact">
+                    <a href="https://www.linkedin.com/" class="social-icon-contact" title="LinkedIn" target="_blank">
+                        <i class="bx bxl-linkedin"></i>
+                    </a>
+                    <a href="https://www.github.com/" class="social-icon-contact" title="GitHub" target="_blank">
+                        <i class="bx bxl-github"></i>
+                    </a>
+                    <a href="https://www.twitter.com/" class="social-icon-contact" title="Twitter" target="_blank">
+                        <i class="bx bxl-twitter"></i>
+                    </a>
+                    <a href="https://www.instagram.com/" class="social-icon-contact" title="Instagram" target="_blank">
+                        <i class="bx bxl-instagram"></i>
+                    </a>
+                </div>
+
+
+            </div>
+
+            <div class="contact-form-wrapper">
+                <h3>Send Me a Message</h3>
+                <form id="contactForm" class="contact-form">
+                    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="your.email@gmail.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" placeholder="Project Subject" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="6" placeholder="Your Message..." required></textarea>
+                    </div>
+
+                    <div class="form-buttons">
+                        <button type="submit" class="btn btn-primary">Send Email</button>
+                        <button type="button" class="btn btn-secondary" onclick="sendToWhatsApp()">Send via WhatsApp</button>
+                    </div>
+                </form>
+                <p id="form-message" class="form-message"></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 Kamal Prajapat. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
