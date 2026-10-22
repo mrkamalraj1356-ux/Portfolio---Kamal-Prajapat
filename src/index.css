@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 240 10% 3.5%;
+    --foreground: 0 0% 100%;
+    --card: 240 10% 4%;
+    --card-foreground: 0 0% 100%;
+    --popover: 240 10% 4%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 0 0% 100%;
+    --primary-foreground: 0 0% 0%;
+    --secondary: 240 5% 10%;
+    --secondary-foreground: 240 5% 65%;
+    --muted: 240 5% 10%;
+    --muted-foreground: 240 5% 65%;
+    --accent: 220 100% 65%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 0 0% 15%;
+    --input: 0 0% 15%;
+    --ring: 0 0% 100%;
+    --radius: 0.75rem;
+  }
+}
+
+@layer base {
+
+  /* Global styling - Default cursor enabled for better UX */
+  body {
+    @apply bg-background text-foreground font-sans antialiased relative overflow-x-hidden;
+    background-color: #050505;
+    min-height: 100vh;
+  }
+
+  /* Admin Panel keeps default cursor */
+  [data-admin-panel],
+  [data-admin-panel] * {
+    cursor: auto !important;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-heading font-semibold tracking-tight;
+  }
+}
+
+
+@layer utilities {
+  .glass-card {
+    @apply bg-white/[0.03] backdrop-blur-md border border-white/[0.08] shadow-premium;
+  }
+
+  .glass-premium {
+    @apply backdrop-blur-xl bg-white/[0.03] border border-white/[0.08] shadow-glass-inset;
+  }
+
+  .text-gradient-premium {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-[#4C8CFF] to-[#8EA6FF];
+  }
+
+  .text-shadow-premium {
+    text-shadow: 0 0 20px rgba(76, 140, 255, 0.3);
+  }
+
+  .card-hover-effect {
+    @apply transition-all duration-300 hover:border-accent/50 hover:shadow-glow hover:-translate-y-1;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Custom scrollbar styles for invoice generators */
+.scrollbar-thin::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+}
+
+.scrollbar-thin:hover::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.scrollbar-track-transparent::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.hover\:scrollbar-thumb-white\/20:hover::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+
+  #docx-preview-print-target,
+  #docx-preview-print-target *,
+  #excel-print-target,
+  #excel-print-target *,
+  #ppt-print-target,
+  #ppt-print-target *,
+  #jpg-print-target,
+  #jpg-print-target *,
+  #html-print-target,
+  #html-print-target * {
+    visibility: visible;
+  }
+
+  #docx-preview-print-target,
+  #excel-print-target,
+  #ppt-print-target,
+  #jpg-print-target,
+  #html-print-target {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: white;
+  }
+
+  /* Ensure pages break correctly */
+  .docx-preview-content section,
+  .print-page-break {
+    break-after: page;
+    page-break-after: always;
+    margin: 0 !important;
+    box-shadow: none !important;
+  }
+
+  @page {
+    margin: 0;
+    size: auto;
+  }
+}

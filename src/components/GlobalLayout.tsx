@@ -1,0 +1,90 @@
+import { ReactNode, Component, useEffect, lazy, Suspense } from "react";
+const Experience3D = lazy(() => import("./Experience3D"));
+import Navbar from "./Navbar";
+
+
+import Lenis from "@studio-freight/lenis";
+import { useLocation } from "react-router-dom";
+
+class Background3DErrorBoundary extends Component<{ children: ReactNode; fallback: ReactNode }, { hasError: boolean }> {
+    state = { hasError: false };
+    static getDerivedStateFromError() {
+        return { hasError: true };
+    }
+    componentDidCatch(error: any) {
+        console.warn("Background 3D scene error caught gracefully:", error);
+    }
+    render() {
+        if (this.state.hasError) {
+            return this.props.fallback;
+        }
+        return this.props.children;
+    }
+}
+
+interface GlobalLayoutProps {
+    children: ReactNode;
+}
+
+const GlobalLayout = ({ children }: GlobalLayoutProps) => {
+    const location = useLocation();
+
+    useEffect(() => {
+        if (location.pathname.startsWith('/admin')) return;
+
+        const lenis = new Lenis({
+            duration: 1.2,
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        });
+
+        function raf(time: number) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
+
+        requestAnimationFrame(raf);
+
+        return () => {
+            lenis.destroy();
+        };
+    }, [location.pathname]);
+
+    // Scroll to top on route change
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [location.pathname]);
+
+    const isAdminRoute = location.pathname.startsWith("/admin");
+
+    return (
+        <div className="relative min-h-screen w-full text-white overflow-x-hidden">
+
+
+            {/* Persistent 3D Background - Fixed z-index handled in component */}
+            {!isAdminRoute ? (
+                <Background3DErrorBoundary fallback={<div className="fixed inset-0 bg-[#050505] -z-10" />}>
+                    <Suspense fallback={<div className="fixed inset-0 bg-[#050505] -z-10" />}>
+                        <Experience3D />
+                    </Suspense>
+                </Background3DErrorBoundary>
+            ) : (
+                <div className="fixed inset-0 bg-[#050505] -z-10" />
+            )}
+
+            {/* Navigation - High z-index */}
+            {!isAdminRoute && (
+                <>
+                    <Navbar />
+
+                </>
+            )}
+
+            {/* Main Content - Relative z-index to sit above background */}
+            <main className="relative z-10">
+                {children}
+            </main>
+        </div>
+    );
+};
+
+export default GlobalLayout;

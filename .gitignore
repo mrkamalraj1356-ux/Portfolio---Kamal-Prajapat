@@ -1,0 +1,56 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Dependencies
+node_modules
+
+# Build output
+dist
+dist-ssr
+*.local
+
+# Environment variables
+.env
+.env.local
+.env.production
+.env.development
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Temporary/Test files
+check_schema.sql
+check_policies.sql
+temp.sql
+test.sql
+*.tmp
+powershell.cmd
+.editorconfig
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# Optional - Deployment configs (if using secrets)
+# wrangler.toml (only if it has secrets)
+# vercel.json (only if it has secrets)
+
+supabase/.temp/
+
+
+supabase/.temp/
+

@@ -1,0 +1,5 @@
+# Cloudflare Pages Configuration
+name = "personal-portfolio"
+pages_build_output_dir = "dist"
+
+# NOTE: Redirects and Headers are managed via public/_redirects and public/_headers
